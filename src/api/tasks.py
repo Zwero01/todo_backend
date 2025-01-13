@@ -45,7 +45,6 @@ async def create_task(item: TaskCreate, db: Session = Depends(get_db)):
     return True
 
 
-# todo: Допилить: удаление по ID
 @router.delete("/delete_task")
 async def delete_task(task_id: str, db: Session = Depends(get_db)):
     to_delete = db.execute(select(Tasks).where(Tasks.id == task_id)).scalars().first()
