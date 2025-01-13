@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     DATABASE_USERNAME: str
     DATABASE_PASSWORD: str
     DATABASE_NAME: str
+    MYSQL_ROOT_PASSWORD: str
 
     @property
     def DATABASE_URI(self):
